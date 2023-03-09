@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Aprende Storybook
+> Este repositorio contiene el código de la aplicación de ejemplo que utilizamos en el taller de Storybook de Make It Real.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="./.workshop/preview.png">
 
-## Available Scripts
+## 💻 Desarrollo
 
-In the project directory, you can run:
+### ¿Qué es este repositorio?
 
-### `npm start`
+Este repositorio contiene el código de la aplicación de ejemplo que utilizamos en el taller de Storybook de Make It Real. El código de la aplicación de ejemplo se encuentra en la carpeta `src`. La carpeta `.storybook` contiene la configuración de Storybook.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ¿Cómo ejecutar este proyecto?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clona este repositorio
+2. Instala las dependencias con `npm install`
+3. Ejecuta el proyecto con `npm start`
 
-### `npm test`
+### ¿Cómo ejecutar Storybook?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clona este repositorio
+2. Instala las dependencias con `npm install`
+3. Ejecuta Storybook con `npm run storybook`
 
-### `npm run build`
+## 📚 Contenido
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ¿Qué es Storybook?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Storybook es una herramienta de desarrollo de interfaz de usuario que permite a los desarrolladores construir componentes de interfaz de usuario de forma aislada. Esto permite a los desarrolladores construir componentes de interfaz de usuario de forma independiente y reutilizable.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 👨🏼‍🏫 Taller
 
-### `npm run eject`
+La idea de este taller es que aprendas a utilizar Storybook para construir componentes de interfaz de usuario de forma aislada y reutilizable. Para esto, utilizaremos los componentes de la aplicación de ejemplo que se encuentra en la carpeta `src` la cual es una lista de tareas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Tu meta sera construir las historias de Storybook para cada uno de los componentes de la aplicación de ejemplo. Para esto, deberás crear los archivos de historias correspondientes a los componentes en la carpeta `./src/components`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="./.workshop/storybook_practice.gif">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 📝 Tareas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [ ] Construye la historia de Storybook para el componente `Task`
+  - [ ] Crea el archivo `Task.stories.js` en la carpeta `./src/components/`
+  - [ ] Importa el componente `Task` en el archivo `Task.stories.js`
+  - [ ] Crea la historia `Default` para el componente `Task` -> Muestra el componente `Task` con el título `Test Task` y el estado `TASK_INBOX`
+  - [ ] Crea la historia `Pinned` para el componente `Task` -> Muestra el componente `Task` con el título `Test Task` y el estado `TASK_PINNED`
+  - [ ] Crea la historia `Archived` para el componente `Task` -> Muestra el componente `Task` con el título `Test Task` y el estado `TASK_ARCHIVED`
+  - [ ] Crea la historia `Long Title` para el componente `Task` -> Muestra el componente `Task` con el título `Test Task with a very long title that will take up more space than usual` y el estado `TASK_INBOX`
+- [ ] Construye la historia de Storybook para el componente `TaskList`
+  - [ ] Crea el archivo `TaskList.stories.js` en la carpeta `./src/components/`
+  - [ ] Importa el componente `TaskList` en el archivo `TaskList.stories.js`
+  - [ ] Crea la historia `Default` para el componente `TaskList` -> Muestra el componente `TaskList` con la propiedad `tasks` con almenos 6 tareas [{}, {}, {}, {}, {}, {}] todas con el estado `TASK_INBOX`
+  - [ ] Crea la historia `With Pinned Tasks` para el componente `TaskList` -> Muestra el componente `TaskList` con almenos 6 tareas [{}, {}, {}, {}, {}, {}] todas con el estado `TASK_INBOX` excepto la primera tarea que debe tener el estado `TASK_PINNED`
+  - [ ] Crea la historia `Loading` para el componente `TaskList` -> Muestra el componente `TaskList` con almenos 6 tareas [{}, {}, {}, {}, {}, {}] todas con el estado `TASK_INBOX` y la propiedad `status` con el valor `loading`.
+  - [ ] Crea la historia `Empty` para el componente `TaskList` -> Muestra el componente `TaskList` con la propiedad `tasks` con un array vacio `[]`.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
